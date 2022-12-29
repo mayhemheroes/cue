@@ -10,4 +10,4 @@ RUN GO_ENABLED=0 go-fuzz-build -libfuzzer -o /${fuzzTarget}.a ./${fuzzTargetPath
 RUN clang -fsanitize=fuzzer /${fuzzTarget}.a -o /${fuzzTarget}.libfuzzer
 
 FROM ubuntu:20.04
-COPY --from=builder /${fuzzTarget}.libfuzzer /
+COPY --from=builder /parser-fuzz.libfuzzer /
