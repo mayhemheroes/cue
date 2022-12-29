@@ -6,7 +6,7 @@ ARG fuzzTarget='parser-fuzz'
 
 ADD . ${project}
 WORKDIR ${project}
-RUN GO_ENABLED=0 go-fuzz-build -libfuzzer -o /${fuzzTarget}-fuzz.a ./${fuzzTargetPath}
+RUN GO_ENABLED=0 go-fuzz-build -libfuzzer -o /${fuzzTarget}.a ./${fuzzTargetPath}
 RUN clang -fsanitize=fuzzer /${fuzzTarget}.a -o /${fuzzTarget}.libfuzzer
 
 FROM ubuntu:20.04
