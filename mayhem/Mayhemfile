@@ -1,5 +1,4 @@
 project: cue
 target: cue-parser-fuzz
-# image: ghcr.io/lotdeef/cue:latest
 cmds:
   - cmd: ./parser-fuzz.libfuzzer
