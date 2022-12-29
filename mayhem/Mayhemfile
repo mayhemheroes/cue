@@ -1,12 +1,5 @@
-# Namespaced project name that the target belongs to
 project: cue
-
-# Target name (should be unique within the project)
 target: cue-parser-fuzz
-
-# Base image to run the binary in.
 # image: ghcr.io/lotdeef/cue:latest
-
-# List of commands used to test the target
 cmds:
-  - cmd: ./fuzz.libfuzzer
+  - cmd: ./parser-fuzz.libfuzzer
