@@ -1,0 +1,4 @@
+project: cue
+target: cue-parser-fuzz
+cmds:
+  - cmd: ./parser-fuzz.libfuzzer
