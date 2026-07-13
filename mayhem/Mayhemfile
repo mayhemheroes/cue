@@ -1,0 +1,7 @@
+# CUE parser fuzz (cuelang.org/go/cue/parser ParseFile) — preserves the original
+# fork's target name for corpus/defect continuity.
+project: cue
+target: cue-parser-fuzz
+cmds:
+  - cmd: /mayhem/cue-parser-fuzz
+    libfuzzer: true
